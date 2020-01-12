@@ -24,6 +24,7 @@ choco install flutter -y
 choco install androidstudio -y
 choco install sonyvegaspro -y
 choco install eagle -y
+choco install docker-desktop -y
 
 # Games
 choco install discord -y
