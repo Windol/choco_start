@@ -20,8 +20,10 @@ choco install tortoisegit -y
 choco install sourcetree -y
 choco install nodejs -y
 choco install android-sdk -y
+choco install flutter -y
 choco install androidstudio -y
 choco install sonyvegaspro -y
+choco install eagle -y
 
 # Games
 choco install discord -y
@@ -31,5 +33,9 @@ choco install leagueoflegends -y
 choco install whatsapp -y
 choco install ext2fsd -y
 choco install stremio -y
+choco install skyfonts -y
+choco install ghostscript -y
+choco install winpcap -y
+choco install obs-studio -y
 
 # You´re done. ;)
