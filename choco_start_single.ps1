@@ -24,6 +24,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 # Essentials
 choco install googlechrome google-drive-file-stream powershell-core easybcd wsl git tortoisegit sourcetree nodejs android-sdk flutter androidstudio docker-desktop discord leagueoflegends whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui -y
-choco install google-backup-and-sync -y --ignore-checksums
+choco install google-backup-and-sync google-play-music-manager -y --ignore-checksums
 
 # You´re done. ;)
