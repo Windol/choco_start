@@ -6,37 +6,22 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # Use according to your own needs...
 
 # Essentials
-choco install googlechrome -y
-choco install google-backup-and-sync -y
-choco install google-drive-file-stream -y
+choco install googlechrome google-drive-file-stream -y
+choco install google-backup-and-sync -y --ignore-checksums
 
 # More Tools
 choco install powershell-core -y
 
 # Dev
-choco install wsl -y
-choco install git -y
-choco install tortoisegit -y
-choco install sourcetree -y
+choco install wsl git tortoisegit sourcetree -y
 choco install nodejs -y
-choco install android-sdk -y
-choco install flutter -y
-choco install androidstudio -y
-choco install sonyvegaspro -y
-choco install eagle -y
+choco install android-sdk flutter androidstudio -y
 choco install docker-desktop -y
 
 # Games
-choco install discord -y
-choco install leagueoflegends -y
+choco install discord leagueoflegends -y
 
 # Others
-choco install whatsapp -y
-choco install ext2fsd -y
-choco install stremio -y
-choco install skyfonts -y
-choco install ghostscript -y
-choco install winpcap -y
-choco install obs-studio -y
+choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui -y
 
 # You´re done. ;)
