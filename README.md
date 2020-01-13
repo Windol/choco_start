@@ -1,5 +1,5 @@
 # choco_start
-Script do Chocolatei para fazer a instalação inicial do meu computador
+Script do Chocolatey para fazer a instalação inicial do meu computador
 ## Como executar
 Abra o powershell como administrador e execute o seguinte comando:
 ```powershell
