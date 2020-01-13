@@ -24,7 +24,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 # Essentials
 choco install googlechrome google-drive-file-stream -y
-choco install google-backup-and-sync -y --ignore-checksums
+choco install google-backup-and-sync google-play-music-manager -y --ignore-checksums
 
 # More Tools
 choco install powershell-core easybcd -y
