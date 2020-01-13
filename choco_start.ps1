@@ -2,6 +2,8 @@
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
 # See packages at https://chocolatey.org/packages/
 # Use according to your own needs...
 
