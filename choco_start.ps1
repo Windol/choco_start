@@ -12,7 +12,7 @@ choco install googlechrome google-drive-file-stream -y
 choco install google-backup-and-sync -y --ignore-checksums
 
 # More Tools
-choco install powershell-core -y
+choco install powershell-core easybcd -y
 
 # Dev
 choco install wsl git tortoisegit sourcetree -y
