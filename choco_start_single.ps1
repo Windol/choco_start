@@ -26,4 +26,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 choco install googlechrome google-drive-file-stream powershell-core easybcd wsl git tortoisegit sourcetree nodejs android-sdk flutter androidstudio docker-desktop discord leagueoflegends whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui -y
 choco install google-backup-and-sync google-play-music-manager -y --ignore-checksums
 
+# Environment
+$oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+$newpath = "$oldpath;C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin"
+Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
+
 # You´re done. ;)
