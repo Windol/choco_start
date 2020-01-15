@@ -41,4 +41,9 @@ choco install discord leagueoflegends -y
 # Others
 choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui -y
 
+# Environment
+$oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+$newpath = "$oldpath;C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin"
+Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
+
 # You´re done. ;)
