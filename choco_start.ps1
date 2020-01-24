@@ -40,7 +40,7 @@ choco install docker-desktop -y
 choco install discord leagueoflegends -y
 
 # Others
-choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui -y
+choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui slack -y
 
 # Environment
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
