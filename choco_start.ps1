@@ -35,6 +35,7 @@ choco install wsl git tortoisegit sourcetree -y
 choco install nodejs -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop -y
+choco install eclipse-cpp-oxygen -y
 
 # Games
 choco install discord leagueoflegends -y
