@@ -75,6 +75,17 @@ $env:IDF_PATH_SET = Expand-EnvironmentVariablesRecursively([System.Environment]:
 git clone -b v4.0-rc --recursive https://github.com/espressif/esp-idf.git $env:IDF_PATH
 
 cmd /c %IDF_PATH%\install.bat
+
+$IDF_TOOLS_EXPORTS_FILE="$env:TEMP\idf_export_vars.tmp"
+
+python.exe $env:IDF_PATH\tools\idf_tools.py export --format key-value > "$IDF_TOOLS_EXPORTS_FILE"
+
+foreach($line in Get-Content "$IDF_TOOLS_EXPORTS_FILE") {
+    $key, $value = $line.split('=')
+
+    [System.Environment]::SetEnvironmentVariable($key, $value, [System.EnvironmentVariableTarget]::Machine)
+}
+
 cmd /c %IDF_PATH%\export.bat
 
 # You´re done. ;)
