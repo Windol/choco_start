@@ -43,9 +43,22 @@ choco install discord leagueoflegends -y
 # Others
 choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui slack -y
 
-# Environment
+# Environments
+# Create variables
+[System.Environment]::SetEnvironmentVariable('IDF_PATH', 'C:\Users\Dados\Environment\eclipse-cpp\esp-idf', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
+
+# Update variables
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
-$newpath = "$oldpath;C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin"
+$newpath = "%IDF_PATH_SET%;$oldpath;C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin"
 Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
+
+# Load variables to this session
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+$env:IDF_PATH = [System.Environment]::GetEnvironmentVariable("IDF_PATH","Machine")
+$env:IDF_PATH_SET = [System.Environment]::GetEnvironmentVariable("IDF_PATH_SET","Machine")
+
+# Install environment
+git clone -b v4.0-rc --recursive https://github.com/espressif/esp-idf.git $env:IDF_PATH
 
 # You´re done. ;)
