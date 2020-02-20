@@ -63,7 +63,7 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 
 # Update variables
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
-$newpath = "%IDF_PATH_SET%;$oldpath;C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin"
+$newpath = "%ANDROID_HOME%/emulator;%IDF_PATH_SET%;$oldpath;C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin"
 Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
 
 # Load variables to this session
