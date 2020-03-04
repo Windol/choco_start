@@ -88,4 +88,5 @@ foreach($line in Get-Content "$IDF_TOOLS_EXPORTS_FILE") {
 
 cmd /c %IDF_PATH%\export.bat
 
+wsl --upgrade Ubuntu
 # You´re done. ;)
