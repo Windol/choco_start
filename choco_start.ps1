@@ -63,10 +63,19 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 
 # Update variables
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
-$newpath = "%ANDROID_HOME%/emulator;%IDF_PATH_SET%;$oldpath;C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin"
+
+[System.Environment]::SetEnvironmentVariable("OriginalPath", $oldpath, [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("CustomPathPrefix", "%ANDROID_HOME%/emulator;%IDF_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin", [System.EnvironmentVariableTarget]::Machine)
+
+$newpath = "%CustomPathPrefix%;%OriginalPath%;%CustomPathSuffix%"
+
 Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
 
 # Load variables to this session
+$env:OriginalPath = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("OriginalPath","Machine")
+$env:CustomPathPrefix = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("CustomPathPrefix","Machine")
+$env:CustomPathSuffix = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("CustomPathSuffix","Machine")
 $env:Path = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"))
 $env:IDF_PATH = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("IDF_PATH","Machine"))
 $env:IDF_PATH_SET = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("IDF_PATH_SET","Machine"))
@@ -89,4 +98,9 @@ foreach($line in Get-Content "$IDF_TOOLS_EXPORTS_FILE") {
 cmd /c %IDF_PATH%\export.bat
 
 wsl --upgrade Ubuntu
+
+$backuppath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+
+[System.Environment]::SetEnvironmentVariable("BackupPath", $backuppath, [System.EnvironmentVariableTarget]::Machine)
+
 # You´re done. ;)
