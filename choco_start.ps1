@@ -37,6 +37,7 @@ choco install nodejs -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop docker-machine -y
 choco install eclipse-cpp-oxygen python -y
+choco install ninja -y
 
 # Games
 choco install discord leagueoflegends -y
@@ -58,15 +59,20 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 }
 
 # Create variables
-[System.Environment]::SetEnvironmentVariable('IDF_PATH', 'C:\Users\Dados\Environment\eclipse-cpp\esp-idf', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('ENVIRONMENT_PATH', 'C:\Users\Dados\Environment', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('IDF_PATH', '%ENVIRONMENT_PATH%\eclipse-cpp\esp-idf', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('FLUTTER_PATH', '%ChocolateyToolsLocation%\flutter\flutter', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('FLUTTER_PATH_SET', '%FLUTTER_PATH%;%FLUTTER_PATH%\bin', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('XTENSA_PATH', '%ENVIRONMENT_PATH%\xtensa-esp32-elf', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('IDF_TOOLS_PATH', '%USERPROFILE%\.espressif', [System.EnvironmentVariableTarget]::Machine)
 
 # Update variables
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
 
 [System.Environment]::SetEnvironmentVariable("OriginalPath", $oldpath, [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable("CustomPathPrefix", "%ANDROID_HOME%/emulator;%IDF_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "C:\tools\flutter\flutter;C:\tools\flutter\flutter\bin", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "%FLUTTER_PATH_SET%;%ChocolateyInstall%\lib\ninja\tools;%XTENSA_PATH%\bin", [System.EnvironmentVariableTarget]::Machine)
 
 $newpath = "%CustomPathPrefix%;%OriginalPath%;%CustomPathSuffix%"
 
