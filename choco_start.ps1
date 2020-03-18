@@ -37,7 +37,6 @@ choco install nodejs -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop docker-machine -y
 choco install eclipse-cpp-oxygen python -y
-choco install ninja -y
 
 # Games
 choco install discord leagueoflegends -y
@@ -72,7 +71,7 @@ $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentC
 
 [System.Environment]::SetEnvironmentVariable("OriginalPath", $oldpath, [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable("CustomPathPrefix", "%ANDROID_HOME%/emulator;%IDF_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "%FLUTTER_PATH_SET%;%ChocolateyInstall%\lib\ninja\tools;%XTENSA_PATH%\bin", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "%FLUTTER_PATH_SET%;%XTENSA_PATH%\bin", [System.EnvironmentVariableTarget]::Machine)
 
 $newpath = "%CustomPathPrefix%;%OriginalPath%;%CustomPathSuffix%"
 
