@@ -63,15 +63,16 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 [System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH', '%ChocolateyToolsLocation%\flutter\flutter', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH_SET', '%FLUTTER_PATH%;%FLUTTER_PATH%\bin', [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable('XTENSA_PATH', '%ENVIRONMENT_PATH%\xtensa-esp32-elf', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_TOOLS_PATH', '%USERPROFILE%\.espressif', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('MSYS32_PATH', '%ENVIRONMENT_PATH%\msys32', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('MSYS32_PATH_SET', '%MSYS32_PATH%\usr\bin;%MSYS32_PATH%\mingw32\bin;%MSYS32_PATH%\opt\xtensa-esp32-elf\bin', [System.EnvironmentVariableTarget]::Machine)
 
 # Update variables
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
 
 [System.Environment]::SetEnvironmentVariable("OriginalPath", $oldpath, [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable("CustomPathPrefix", "%ANDROID_HOME%/emulator;%IDF_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "%FLUTTER_PATH_SET%;%XTENSA_PATH%\bin", [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "%FLUTTER_PATH_SET%;%MSYS32_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
 
 $newpath = "%CustomPathPrefix%;%OriginalPath%;%CustomPathSuffix%"
 
