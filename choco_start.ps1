@@ -33,7 +33,7 @@ choco install powershell-core easybcd recuva -y
 
 # Dev
 choco install wsl git tortoisegit sourcetree -y
-choco install nodejs -y
+choco install nodejs vscode -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop docker-machine -y
 choco install eclipse-cpp-oxygen python -y
