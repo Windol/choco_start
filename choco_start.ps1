@@ -29,6 +29,7 @@ New-Item -Path "C:\Users\windo\.vscode" -ItemType SymbolicLink -Value "C:\Users\
 New-Item -Path "C:\Users\windo\.bash_history" -ItemType SymbolicLink -Value "C:\Users\Dados\.bash_history"
 New-Item -Path "C:\Users\windo\.emulator_console_auth_token" -ItemType SymbolicLink -Value "C:\Users\Dados\.emulator_console_auth_token"
 New-Item -Path "C:\Users\windo\.gitconfig" -ItemType SymbolicLink -Value "C:\Users\Dados\.gitconfig"
+New-Item -Path "C:\Users\windo\.jgitconfig" -ItemType SymbolicLink -Value "C:\Users\Dados\.jgitconfig"
 New-Item -Path "C:\Users\windo\_netrc" -ItemType SymbolicLink -Value "C:\Users\Dados\_netrc"
 New-Item -Path "C:\Users\windo\.AndroidStudio3.6" -ItemType SymbolicLink -Value "C:\Users\Dados\.AndroidStudio3.6"
 
