@@ -15,6 +15,22 @@ New-Item -Path "C:\Users\windo\Searches" -ItemType SymbolicLink -Value "C:\Users
 New-Item -Path "C:\Users\windo\Videos" -ItemType SymbolicLink -Value "C:\Users\Dados\Videos"
 New-Item -Path "C:\Users\windo\Google Drive" -ItemType SymbolicLink -Value "C:\Users\Dados\Google Drive"
 New-Item -Path "C:\Users\windo\Environment" -ItemType SymbolicLink -Value "C:\Users\Dados\Environment"
+New-Item -Path "C:\Users\windo\StudioProjects" -ItemType SymbolicLink -Value "C:\Users\Dados\StudioProjects"
+New-Item -Path "C:\Users\windo\temp" -ItemType SymbolicLink -Value "C:\Users\Dados\temp"
+New-Item -Path "C:\Users\windo\.android" -ItemType SymbolicLink -Value "C:\Users\Dados\.android"
+New-Item -Path "C:\Users\windo\.cleverfiles" -ItemType SymbolicLink -Value "C:\Users\Dados\.cleverfiles"
+New-Item -Path "C:\Users\windo\.eclipse" -ItemType SymbolicLink -Value "C:\Users\Dados\.eclipse"
+New-Item -Path "C:\Users\windo\.espressif" -ItemType SymbolicLink -Value "C:\Users\Dados\.espressif"
+New-Item -Path "C:\Users\windo\.config" -ItemType SymbolicLink -Value "C:\Users\Dados\.config"
+New-Item -Path "C:\Users\windo\.docker" -ItemType SymbolicLink -Value "C:\Users\Dados\.docker"
+New-Item -Path "C:\Users\windo\.gradle" -ItemType SymbolicLink -Value "C:\Users\Dados\.gradle"
+New-Item -Path "C:\Users\windo\.ssh" -ItemType SymbolicLink -Value "C:\Users\Dados\.ssh"
+New-Item -Path "C:\Users\windo\.vscode" -ItemType SymbolicLink -Value "C:\Users\Dados\.vscode"
+New-Item -Path "C:\Users\windo\.bash_history" -ItemType SymbolicLink -Value "C:\Users\Dados\.bash_history"
+New-Item -Path "C:\Users\windo\.emulator_console_auth_token" -ItemType SymbolicLink -Value "C:\Users\Dados\.emulator_console_auth_token"
+New-Item -Path "C:\Users\windo\.gitconfig" -ItemType SymbolicLink -Value "C:\Users\Dados\.gitconfig"
+New-Item -Path "C:\Users\windo\_netrc" -ItemType SymbolicLink -Value "C:\Users\Dados\_netrc"
+New-Item -Path "C:\Users\windo\.AndroidStudio3.6" -ItemType SymbolicLink -Value "C:\Users\Dados\.AndroidStudio3.6"
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
