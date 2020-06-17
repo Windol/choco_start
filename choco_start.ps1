@@ -78,7 +78,7 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 # Create variables
 [System.Environment]::SetEnvironmentVariable('ENVIRONMENT_PATH', 'C:\Users\Dados\Environment', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_PATH', '%ENVIRONMENT_PATH%\eclipse-cpp\esp-idf', [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\tools;%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH', '%ChocolateyToolsLocation%\flutter', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH_SET', '%FLUTTER_PATH%;%FLUTTER_PATH%\bin', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_TOOLS_PATH', '%USERPROFILE%\.espressif', [System.EnvironmentVariableTarget]::Machine)
