@@ -63,7 +63,7 @@ choco install golang -y
 choco install discord leagueoflegends -y
 
 # Others
-choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio chocolateygui slack -y
+choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio streamlabs-obs chocolateygui slack -y
 
 # Environments
 function Expand-EnvironmentVariablesRecursively($unexpanded) {
