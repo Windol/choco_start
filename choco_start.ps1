@@ -49,7 +49,8 @@ choco install googlechrome google-drive-file-stream -y
 choco install google-backup-and-sync google-play-music-manager -y --ignore-checksums
 
 # More Tools
-choco install powershell-core easybcd recuva -y
+choco install powershell-core powertoys -y
+# easybcd recuva -y
 
 # Dev
 choco install wsl git tortoisegit sourcetree -y
