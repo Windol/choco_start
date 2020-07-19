@@ -49,7 +49,7 @@ choco install googlechrome google-drive-file-stream -y
 choco install google-backup-and-sync google-play-music-manager -y --ignore-checksums
 
 # More Tools
-choco install powershell-core powertoys -y
+choco install powershell-core dotnetcore-runtime powertoys -y
 # easybcd recuva -y
 
 # Dev
