@@ -54,7 +54,7 @@ choco install powershell-core dotnetcore-runtime powertoys -y
 # easybcd recuva -y
 
 # Dev
-choco install wsl git tortoisegit sourcetree -y
+choco install wsl git tortoisegit sourcetree github-desktop -y
 choco install nodejs vscode -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop docker-machine -y
