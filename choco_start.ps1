@@ -58,7 +58,7 @@ choco install wsl git tortoisegit sourcetree github-desktop -y
 choco install nodejs vscode -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop docker-machine -y
-choco install eclipse-cpp-oxygen python -y
+choco install eclipse-cpp-oxygen llvm python -y
 choco install golang -y
 
 # Games
