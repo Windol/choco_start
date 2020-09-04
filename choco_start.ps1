@@ -36,6 +36,7 @@ New-Item -Path "C:\Riot Games" -ItemType SymbolicLink -Value "C:\Users\Dados\Jog
 New-Item -Path "C:\Users\windo\.AndroidStudio4.0" -ItemType SymbolicLink -Value "C:\Users\Dados\.AndroidStudio4.0"
 New-Item -Path "C:\Users\windo\AppData\Local\Arduino15" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Arduino15"
 New-Item -Path "C:\Users\windo\AppData\Roaming\Arduino" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Arduino"
+New-Item -Path "C:\ProgramData\DockerDesktop" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\DockerDesktop"
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
