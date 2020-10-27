@@ -64,7 +64,7 @@ choco install nodejs vscode -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop docker-machine -y
 choco install eclipse-cpp-oxygen llvm python -y
-choco install golang -y
+choco install golang jdk11 -y
 
 # Games
 choco install discord leagueoflegends -y
