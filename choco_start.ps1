@@ -41,6 +41,7 @@ New-Item -Path "C:\Users\windo\AppData\Roaming\stremio" -ItemType SymbolicLink -
 New-Item -Path "C:\Users\windo\AppData\Local\Google" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Google"
 New-Item -Path "C:\Android" -ItemType SymbolicLink -Value "C:\Users\Dados\Programas\Android"
 New-Item -Path "C:\tools" -ItemType SymbolicLink -Value "C:\Users\Dados\Programas\tools"
+New-Item -Path "C:\Users\windo\AppData\Local\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Docker"
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
