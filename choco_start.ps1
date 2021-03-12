@@ -44,6 +44,8 @@ New-Item -Path "C:\tools" -ItemType SymbolicLink -Value "C:\Users\Dados\Programa
 New-Item -Path "C:\Users\windo\AppData\Local\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Docker"
 New-Item -Path "C:\ProgramData\Package Cache" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Package Cache"
 New-Item -Path "C:\ProgramData\Dell" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Dell"
+New-Item -Path "C:\Program Files\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Docker"
+New-Item -Path "C:\Program Files (x86)\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Microsoft Visual Studio"
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -55,14 +57,14 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 # Essentials
 choco install googlechrome google-drive-file-stream -y
-choco install google-backup-and-sync google-play-music-manager -y --ignore-checksums
+choco install google-backup-and-sync -y --ignore-checksums
 
 # More Tools
 choco install powershell-core dotnetcore-runtime powertoys -y
 # easybcd recuva -y
 
 # Dev
-choco install wsl git tortoisegit sourcetree github-desktop -y
+choco install wsl git tortoisegit -y
 choco install nodejs vscode -y
 choco install android-sdk flutter androidstudio -y
 choco install docker-desktop docker-machine -y
@@ -118,7 +120,7 @@ $env:IDF_PATH = Expand-EnvironmentVariablesRecursively([System.Environment]::Get
 $env:IDF_PATH_SET = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("IDF_PATH_SET","Machine"))
 
 # Install environment
-git clone -b v4.0-rc --recursive https://github.com/espressif/esp-idf.git $env:IDF_PATH
+git clone -b v4.1.1 --recursive https://github.com/espressif/esp-idf.git $env:IDF_PATH
 
 cmd /c %IDF_PATH%\install.bat
 
