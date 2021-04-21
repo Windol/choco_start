@@ -5,6 +5,7 @@ New-Item -Path "C:\Users\windo\3D Objects" -ItemType SymbolicLink -Value "C:\Use
 New-Item -Path "C:\Users\windo\Contacts" -ItemType SymbolicLink -Value "C:\Users\Dados\Contacts"
 New-Item -Path "C:\Users\windo\Desktop" -ItemType SymbolicLink -Value "C:\Users\Dados\Desktop"
 New-Item -Path "C:\Users\windo\Documents" -ItemType SymbolicLink -Value "C:\Users\Dados\Documents"
+New-Item -Path "C:\Users\windo\Documentos" -ItemType SymbolicLink -Value "C:\Users\Dados\Documents"
 New-Item -Path "C:\Users\windo\Downloads" -ItemType SymbolicLink -Value "C:\Users\Dados\Downloads"
 New-Item -Path "C:\Users\windo\Favorites" -ItemType SymbolicLink -Value "C:\Users\Dados\Favorites"
 New-Item -Path "C:\Users\windo\Links" -ItemType SymbolicLink -Value "C:\Users\Dados\Links"
@@ -56,8 +57,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 # Use according to your own needs...
 
 # Essentials
-choco install googlechrome google-drive-file-stream -y
-choco install google-backup-and-sync -y --ignore-checksums
+choco install googlechrome google-drive-file-stream -y --ignore-checksums
 
 # More Tools
 choco install powershell-core dotnetcore-runtime powertoys -y
@@ -65,11 +65,9 @@ choco install powershell-core dotnetcore-runtime powertoys -y
 
 # Dev
 choco install wsl git tortoisegit -y
-choco install nodejs vscode -y
-choco install android-sdk flutter androidstudio -y
+choco install nodejs android-sdk flutter llvm python golang openjdk -y
+choco install vscode -y
 choco install docker-desktop docker-machine -y
-choco install eclipse-cpp-oxygen llvm python -y
-choco install golang openjdk -y
 
 # Games
 choco install discord leagueoflegends -y
