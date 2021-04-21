@@ -118,7 +118,7 @@ $env:IDF_PATH = Expand-EnvironmentVariablesRecursively([System.Environment]::Get
 $env:IDF_PATH_SET = Expand-EnvironmentVariablesRecursively([System.Environment]::GetEnvironmentVariable("IDF_PATH_SET","Machine"))
 
 # Install environment
-git clone -b v4.1.1 --recursive https://github.com/espressif/esp-idf.git $env:IDF_PATH
+git clone -b release-v4.1 --recursive https://github.com/espressif/esp-idf.git $env:IDF_PATH
 
 cmd /c %IDF_PATH%\install.bat
 
