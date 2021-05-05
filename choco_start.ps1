@@ -110,6 +110,7 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 [System.Environment]::SetEnvironmentVariable('IDF_TOOLS_PATH', '%USERPROFILE%\.espressif', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('MSYS32_PATH', '%ENVIRONMENT_PATH%\msys32', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('MSYS32_PATH_SET', '%MSYS32_PATH%\usr\bin;%MSYS32_PATH%\mingw32\bin;%MSYS32_PATH%\opt\xtensa-esp32-elf\bin', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('GIT_SSH', '"G:\My Drive\PortableApps\PAgeant\PLINK.EXE"', [System.EnvironmentVariableTarget]::Machine)
 
 # Update variables
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
