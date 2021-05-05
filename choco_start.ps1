@@ -77,6 +77,7 @@ choco install whatsapp stremio skyfonts ghostscript winpcap obs-studio obs-virtu
 
 # Install conform
 go get github.com/talos-systems/conform
+npm install -g standard-version
 
 # WSL 2
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
