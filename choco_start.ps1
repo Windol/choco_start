@@ -84,6 +84,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-default-version 2
 wsl --list --verbose
 # https://docs.microsoft.com/pt-br/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package
+wsl --install -d ubuntu
 
 # Environments
 function Expand-EnvironmentVariablesRecursively($unexpanded) {
