@@ -112,10 +112,10 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
 
 [System.Environment]::SetEnvironmentVariable("OriginalPath", $oldpath, [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable("CustomPathPrefix", "%ANDROID_HOME%\emulator;%IDF_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "%FLUTTER_PATH_SET%;%MSYS32_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
+# [System.Environment]::SetEnvironmentVariable("CustomPathPrefix", "%ANDROID_HOME%\emulator;%IDF_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
+# [System.Environment]::SetEnvironmentVariable("CustomPathSuffix", "%FLUTTER_PATH_SET%;%MSYS32_PATH_SET%", [System.EnvironmentVariableTarget]::Machine)
 
-$newpath = "%CustomPathPrefix%;%OriginalPath%;%CustomPathSuffix%"
+$newpath = "%ANDROID_HOME%\emulator;%IDF_PATH_SET%;%OriginalPath%;%FLUTTER_PATH_SET%;%MSYS32_PATH_SET%"
 
 Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
 
