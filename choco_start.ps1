@@ -60,8 +60,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 choco install googlechrome google-drive-file-stream -y --ignore-checksums
 
 # More Tools
-choco install powershell-core dotnetcore-runtime powertoys -y
-# easybcd recuva -y
+choco install powershell-core dotnetcore-runtime powertoys easybcd -y
+# recuva -y
 
 # Dev
 choco install wsl git tortoisegit -y
