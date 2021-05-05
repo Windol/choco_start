@@ -52,6 +52,12 @@ New-Item -Path "C:\Program Files (x86)\Microsoft Visual Studio" -ItemType Symbol
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+# https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+wsl --set-default-version 2
+wsl --list --verbose
+# https://docs.microsoft.com/pt-br/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package
 
 # See packages at https://chocolatey.org/packages/
 # Use according to your own needs...
@@ -60,20 +66,23 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 choco install googlechrome google-drive-file-stream -y --ignore-checksums
 
 # More Tools
-choco install powershell-core dotnetcore-runtime powertoys easybcd -y
-# recuva -y
+choco install powershell-core dotnetcore-runtime powertoys -y
+# easybcd recuva -y
 
 # Dev
 choco install wsl git tortoisegit -y
-choco install nodejs android-sdk flutter llvm python golang openjdk -y
+choco install nodejs android-sdk flutter python golang openjdk -y
+# llvm
 choco install vscode -y
-choco install docker-desktop docker-machine -y
+#choco install docker-desktop docker-machine -y
 
 # Games
-choco install discord leagueoflegends -y
+choco install discord -y
+# leagueoflegends
 
 # Others
-choco install whatsapp ext2fsd stremio skyfonts ghostscript winpcap obs-studio obs-virtualcam streamlabs-obs chocolateygui slack microsoft-teams -y
+choco install whatsapp stremio skyfonts ghostscript winpcap obs-studio obs-virtualcam streamlabs-obs chocolateygui slack microsoft-teams -y
+# ext2fsd
 
 # Environments
 function Expand-EnvironmentVariablesRecursively($unexpanded) {
