@@ -63,8 +63,7 @@ choco install powershell-core dotnetcore-runtime powertoys -y
 
 # Dev
 choco install wsl git tortoisegit -y
-choco install nodejs android-sdk flutter python golang openjdk -y
-# llvm
+choco install nodejs android-sdk flutter python llvm golang openjdk -y
 choco install vscode -y
 #choco install docker-desktop docker-machine -y
 
@@ -75,6 +74,9 @@ choco install discord -y
 # Others
 choco install whatsapp stremio skyfonts ghostscript winpcap obs-studio obs-virtualcam streamlabs-obs chocolateygui slack microsoft-teams -y
 # ext2fsd
+
+# Install conform
+go get github.com/talos-systems/conform
 
 # WSL 2
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
