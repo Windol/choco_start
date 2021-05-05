@@ -85,6 +85,8 @@ wsl --set-default-version 2
 wsl --list --verbose
 # https://docs.microsoft.com/pt-br/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package
 wsl --install -d ubuntu
+wsl --update
+wsl --shutdown
 
 # Environments
 function Expand-EnvironmentVariablesRecursively($unexpanded) {
