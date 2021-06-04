@@ -80,9 +80,12 @@ go get github.com/talos-systems/conform
 npm install -g standard-version
 
 # WSL 2
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+DISM /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V /All /norestart
+bcdedit /set hypervisorlaunchtype auto
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+DISM /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+DISM /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 # https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 wsl --set-default-version 2
 wsl --list --verbose
