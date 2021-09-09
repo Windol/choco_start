@@ -47,6 +47,8 @@ New-Item -Path "C:\ProgramData\Package Cache" -ItemType SymbolicLink -Value "C:\
 New-Item -Path "C:\ProgramData\Dell" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Dell"
 New-Item -Path "C:\Program Files\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Docker"
 New-Item -Path "C:\Program Files (x86)\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Microsoft Visual Studio"
+New-Item -Path "C:\Program Files\Siemens" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Siemens"
+New-Item -Path "C:\Users\windo\AppData\Local\Packages" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Packages"
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
