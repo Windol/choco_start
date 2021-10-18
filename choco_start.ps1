@@ -66,6 +66,7 @@ choco install powershell-core dotnetcore-runtime powertoys -y
 # Dev
 choco install wsl git tortoisegit -y
 choco install nodejs android-sdk flutter python llvm golang openjdk scrcpy -y
+choco install visualstudio2017community visualstudio2017buildtools visualstudio2017-workload-vctools visualstudio2017-workload-nativedesktop -y
 choco install vscode -y
 #choco install docker-desktop docker-machine -y
 
