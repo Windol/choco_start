@@ -49,6 +49,11 @@ New-Item -Path "C:\Program Files\Docker" -ItemType SymbolicLink -Value "C:\Users
 New-Item -Path "C:\Program Files (x86)\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Microsoft Visual Studio"
 New-Item -Path "C:\Program Files\Siemens" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Siemens"
 New-Item -Path "C:\Users\windo\AppData\Local\Packages" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Packages"
+New-Item -Path "C:\Users\windo\AppData\Local\Autodesk" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Autodesk"
+New-Item -Path "C:\Users\windo\AppData\Local\WhatsApp" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\WhatsApp"
+New-Item -Path "C:\Users\windo\AppData\Roaming\Code" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Code"
+New-Item -Path "C:\Users\windo\AppData\Roaming\Eagle" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Eagle"
+New-Item -Path "C:\Program Files (x86)\Steam" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Steam"
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
