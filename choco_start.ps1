@@ -53,6 +53,7 @@ New-Item -Path "C:\Users\windo\AppData\Local\Autodesk" -ItemType SymbolicLink -V
 New-Item -Path "C:\Users\windo\AppData\Local\WhatsApp" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\WhatsApp"
 New-Item -Path "C:\Users\windo\AppData\Roaming\Code" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Code"
 New-Item -Path "C:\Users\windo\AppData\Roaming\Eagle" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Eagle"
+New-Item -Path "C:\Users\windo\AppData\Roaming\obs-studio" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\obs-studio"
 New-Item -Path "C:\Program Files (x86)\Steam" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Steam"
 
 # Get Chocolatey
