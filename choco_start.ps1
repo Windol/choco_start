@@ -119,6 +119,7 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 # Create variables
 [System.Environment]::SetEnvironmentVariable('ENVIRONMENT_PATH', 'C:\Users\Dados\Environment', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_PATH', '%ENVIRONMENT_PATH%\eclipse-cpp\esp-idf', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('RMAKER_PATH', '%ENVIRONMENT_PATH%\eclipse-cpp\esp-rainmaker', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\tools;%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH', '%ChocolateyToolsLocation%\flutter', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH_SET', '%FLUTTER_PATH%;%FLUTTER_PATH%\bin;%FLUTTER_PATH%\.pub-cache\bin', [System.EnvironmentVariableTarget]::Machine)
@@ -127,6 +128,7 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 [System.Environment]::SetEnvironmentVariable('MSYS32_PATH_SET', '%MSYS32_PATH%\usr\bin;%MSYS32_PATH%\mingw32\bin;%MSYS32_PATH%\opt\xtensa-esp32-elf\bin', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('GIT_SSH', 'G:\My Drive\PortableApps\PuTTYPortable\App\putty\PLINK.EXE', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('SSH_AUTH_SOCK', '\\.\pipe\ssh-pageant', [System.EnvironmentVariableTarget]::Machine)
+[System.Environment]::SetEnvironmentVariable('ESPPORT', 'COM7', [System.EnvironmentVariableTarget]::Machine)
 
 # Update variables
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
