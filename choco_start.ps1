@@ -58,8 +58,8 @@ New-Item -Path "C:\Users\windo\AppData\Roaming\obs-studio" -ItemType SymbolicLin
 New-Item -Path "C:\Program Files (x86)\Steam" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Steam"
 New-Item -Path "C:\Program Files\Altium" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Altium"
 
-Import-PfxCertificate -CertStoreLocation Cert:\LocalMachine\Root -FilePath "C:\Program Files\Siemens\Automation\Portal V16\Bin\CA_STEP7.cer"
-Import-PfxCertificate -CertStoreLocation Cert:\LocalMachine\Root -FilePath "C:\Program Files\Siemens\Automation\Portal V16\Bin\Siemens_Automation_CA_2019.cer"
+Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root -FilePath "C:\Program Files\Siemens\Automation\Portal V16\Bin\CA_STEP7.cer"
+Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root -FilePath "C:\Program Files\Siemens\Automation\Portal V16\Bin\Siemens_Automation_CA_2019.cer"
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
