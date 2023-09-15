@@ -14,48 +14,48 @@ New-Item -Path "C:\Users\windo\Pictures" -ItemType SymbolicLink -Value "C:\Users
 New-Item -Path "C:\Users\windo\Saved Games" -ItemType SymbolicLink -Value "C:\Users\Dados\Saved Games"
 New-Item -Path "C:\Users\windo\Searches" -ItemType SymbolicLink -Value "C:\Users\Dados\Searches"
 New-Item -Path "C:\Users\windo\Videos" -ItemType SymbolicLink -Value "C:\Users\Dados\Videos"
-New-Item -Path "C:\Users\windo\Google Drive" -ItemType SymbolicLink -Value "C:\Users\Dados\Google Drive"
+# New-Item -Path "C:\Users\windo\Google Drive" -ItemType SymbolicLink -Value "C:\Users\Dados\Google Drive"
 New-Item -Path "C:\Users\windo\Environment" -ItemType SymbolicLink -Value "C:\Users\Dados\Environment"
 New-Item -Path "C:\Users\windo\StudioProjects" -ItemType SymbolicLink -Value "C:\Users\Dados\StudioProjects"
-New-Item -Path "C:\Users\windo\temp" -ItemType SymbolicLink -Value "C:\Users\Dados\temp"
-New-Item -Path "C:\Users\windo\.android" -ItemType SymbolicLink -Value "C:\Users\Dados\.android"
-New-Item -Path "C:\Users\windo\.cleverfiles" -ItemType SymbolicLink -Value "C:\Users\Dados\.cleverfiles"
-New-Item -Path "C:\Users\windo\.eclipse" -ItemType SymbolicLink -Value "C:\Users\Dados\.eclipse"
-New-Item -Path "C:\Users\windo\.espressif" -ItemType SymbolicLink -Value "C:\Users\Dados\.espressif"
-New-Item -Path "C:\Users\windo\.config" -ItemType SymbolicLink -Value "C:\Users\Dados\.config"
-New-Item -Path "C:\Users\windo\.docker" -ItemType SymbolicLink -Value "C:\Users\Dados\.docker"
-New-Item -Path "C:\Users\windo\.gradle" -ItemType SymbolicLink -Value "C:\Users\Dados\.gradle"
-New-Item -Path "C:\Users\windo\.ssh" -ItemType SymbolicLink -Value "C:\Users\Dados\.ssh"
-New-Item -Path "C:\Users\windo\.vscode" -ItemType SymbolicLink -Value "C:\Users\Dados\.vscode"
-New-Item -Path "C:\Users\windo\.bash_history" -ItemType SymbolicLink -Value "C:\Users\Dados\.bash_history"
-New-Item -Path "C:\Users\windo\.emulator_console_auth_token" -ItemType SymbolicLink -Value "C:\Users\Dados\.emulator_console_auth_token"
-New-Item -Path "C:\Users\windo\.gitconfig" -ItemType SymbolicLink -Value "C:\Users\Dados\.gitconfig"
-New-Item -Path "C:\Users\windo\.jgitconfig" -ItemType SymbolicLink -Value "C:\Users\Dados\.jgitconfig"
-New-Item -Path "C:\Users\windo\_netrc" -ItemType SymbolicLink -Value "C:\Users\Dados\_netrc"
+# New-Item -Path "C:\Users\windo\temp" -ItemType SymbolicLink -Value "C:\Users\Dados\temp"
+# New-Item -Path "C:\Users\windo\.android" -ItemType SymbolicLink -Value "C:\Users\Dados\.android"
+# New-Item -Path "C:\Users\windo\.cleverfiles" -ItemType SymbolicLink -Value "C:\Users\Dados\.cleverfiles"
+# New-Item -Path "C:\Users\windo\.eclipse" -ItemType SymbolicLink -Value "C:\Users\Dados\.eclipse"
+# New-Item -Path "C:\Users\windo\.espressif" -ItemType SymbolicLink -Value "C:\Users\Dados\.espressif"
+# New-Item -Path "C:\Users\windo\.config" -ItemType SymbolicLink -Value "C:\Users\Dados\.config"
+# New-Item -Path "C:\Users\windo\.docker" -ItemType SymbolicLink -Value "C:\Users\Dados\.docker"
+# New-Item -Path "C:\Users\windo\.gradle" -ItemType SymbolicLink -Value "C:\Users\Dados\.gradle"
+# New-Item -Path "C:\Users\windo\.ssh" -ItemType SymbolicLink -Value "C:\Users\Dados\.ssh"
+# New-Item -Path "C:\Users\windo\.vscode" -ItemType SymbolicLink -Value "C:\Users\Dados\.vscode"
+# New-Item -Path "C:\Users\windo\.bash_history" -ItemType SymbolicLink -Value "C:\Users\Dados\.bash_history"
+# New-Item -Path "C:\Users\windo\.emulator_console_auth_token" -ItemType SymbolicLink -Value "C:\Users\Dados\.emulator_console_auth_token"
+# New-Item -Path "C:\Users\windo\.gitconfig" -ItemType SymbolicLink -Value "C:\Users\Dados\.gitconfig"
+# New-Item -Path "C:\Users\windo\.jgitconfig" -ItemType SymbolicLink -Value "C:\Users\Dados\.jgitconfig"
+# New-Item -Path "C:\Users\windo\_netrc" -ItemType SymbolicLink -Value "C:\Users\Dados\_netrc"
 New-Item -Path "C:\Users\windo\AppData\Roaming\Factorio" -ItemType SymbolicLink -Value "C:\Users\Dados\Jogos\Factorio Roaming"
-New-Item -Path "C:\Riot Games" -ItemType SymbolicLink -Value "C:\Users\Dados\Jogos\Riot Games"
-New-Item -Path "C:\Users\windo\.AndroidStudio4.0" -ItemType SymbolicLink -Value "C:\Users\Dados\.AndroidStudio4.0"
-New-Item -Path "C:\Users\windo\AppData\Local\Arduino15" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Arduino15"
-New-Item -Path "C:\Users\windo\AppData\Roaming\Arduino" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Arduino"
-New-Item -Path "C:\ProgramData\DockerDesktop" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\DockerDesktop"
-New-Item -Path "C:\Users\windo\AppData\Roaming\stremio" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\stremio"
-New-Item -Path "C:\Users\windo\AppData\Local\Google" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Google"
-New-Item -Path "C:\Android" -ItemType SymbolicLink -Value "C:\Users\Dados\Programas\Android"
-New-Item -Path "C:\tools" -ItemType SymbolicLink -Value "C:\Users\Dados\Programas\tools"
-New-Item -Path "C:\Users\windo\AppData\Local\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Docker"
-New-Item -Path "C:\ProgramData\Package Cache" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Package Cache"
-New-Item -Path "C:\ProgramData\Dell" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Dell"
-New-Item -Path "C:\Program Files\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Docker"
-New-Item -Path "C:\Program Files (x86)\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Microsoft Visual Studio"
+# New-Item -Path "C:\Riot Games" -ItemType SymbolicLink -Value "C:\Users\Dados\Jogos\Riot Games"
+# New-Item -Path "C:\Users\windo\.AndroidStudio4.0" -ItemType SymbolicLink -Value "C:\Users\Dados\.AndroidStudio4.0"
+# New-Item -Path "C:\Users\windo\AppData\Local\Arduino15" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Arduino15"
+# New-Item -Path "C:\Users\windo\AppData\Roaming\Arduino" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Arduino"
+# New-Item -Path "C:\ProgramData\DockerDesktop" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\DockerDesktop"
+# New-Item -Path "C:\Users\windo\AppData\Roaming\stremio" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\stremio"
+# New-Item -Path "C:\Users\windo\AppData\Local\Google" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Google"
+# New-Item -Path "C:\Android" -ItemType SymbolicLink -Value "C:\Users\Dados\Programas\Android"
+# New-Item -Path "C:\tools" -ItemType SymbolicLink -Value "C:\Users\Dados\Programas\tools"
+# New-Item -Path "C:\Users\windo\AppData\Local\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Docker"
+# New-Item -Path "C:\ProgramData\Package Cache" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Package Cache"
+# New-Item -Path "C:\ProgramData\Dell" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Dell"
+# New-Item -Path "C:\Program Files\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Docker"
+# New-Item -Path "C:\Program Files (x86)\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Microsoft Visual Studio"
 New-Item -Path "C:\Program Files\Siemens" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Siemens"
-New-Item -Path "C:\Program Files\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Microsoft Visual Studio"
-New-Item -Path "C:\Users\windo\AppData\Local\Packages" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Packages"
-New-Item -Path "C:\Users\windo\AppData\Local\Autodesk" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Autodesk"
-New-Item -Path "C:\Users\windo\AppData\Local\WhatsApp" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\WhatsApp"
-New-Item -Path "C:\Users\windo\AppData\Roaming\Code" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Code"
+# New-Item -Path "C:\Program Files\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Microsoft Visual Studio"
+# New-Item -Path "C:\Users\windo\AppData\Local\Packages" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Packages"
+# New-Item -Path "C:\Users\windo\AppData\Local\Autodesk" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\Autodesk"
+# New-Item -Path "C:\Users\windo\AppData\Local\WhatsApp" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Local\WhatsApp"
+# New-Item -Path "C:\Users\windo\AppData\Roaming\Code" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Code"
 New-Item -Path "C:\Users\windo\AppData\Roaming\Eagle" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\Eagle"
 New-Item -Path "C:\Users\windo\AppData\Roaming\obs-studio" -ItemType SymbolicLink -Value "C:\Users\Dados\AppData\Roaming\obs-studio"
-New-Item -Path "C:\Program Files (x86)\Steam" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Steam"
+# New-Item -Path "C:\Program Files (x86)\Steam" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Steam"
 New-Item -Path "C:\Program Files\Altium" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Altium"
 
 Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root -FilePath "C:\Program Files\Siemens\Automation\Portal V16\Bin\CA_STEP7.cer"
@@ -76,22 +76,25 @@ choco install powershell-core dotnetcore-runtime powertoys -y
 
 # Dev
 choco install wsl git tortoisegit -y
-choco install nodejs android-sdk flutter python llvm golang openjdk scrcpy -y
-choco install visualstudio2019community visualstudio2019buildtools visualstudio2019-workload-vctools visualstudio2019-workload-nativedesktop -y
+# choco install nodejs android-sdk flutter python llvm golang openjdk scrcpy -y
+choco install nodejs python openjdk scrcpy -y
+# choco install visualstudio2019community visualstudio2019buildtools visualstudio2019-workload-vctools visualstudio2019-workload-nativedesktop -y
 choco install vscode -y
-#choco install docker-desktop docker-machine -y
+# choco install docker-desktop docker-machine -y
+choco install docker-desktop -y
 
 # Games
 choco install discord -y
 # leagueoflegends
 
 # Others
-choco install whatsapp stremio skyfonts ghostscript winpcap obs-studio obs-virtualcam streamlabs-obs chocolateygui slack microsoft-teams -y
-# ext2fsd
+choco install whatsapp -y --ignore-checksums
+choco install whatsapp stremio ghostscript winpcap obs-studio obs-virtualcam streamlabs-obs chocolateygui slack -y
+# skyfonts ext2fsd microsoft-teams
 
 # Install conform
-go get github.com/talos-systems/conform
-npm install -g standard-version
+# go get github.com/talos-systems/conform
+# npm install -g standard-version
 
 # WSL 2
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
@@ -125,12 +128,12 @@ function Expand-EnvironmentVariablesRecursively($unexpanded) {
 [System.Environment]::SetEnvironmentVariable('ENVIRONMENT_PATH', 'C:\Users\Dados\Environment', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_PATH', '%ENVIRONMENT_PATH%\eclipse-cpp\esp-idf', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('RMAKER_PATH', '%ENVIRONMENT_PATH%\eclipse-cpp\esp-rainmaker', [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\tools;%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable('FLUTTER_PATH', '%ChocolateyToolsLocation%\flutter', [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable('FLUTTER_PATH_SET', '%FLUTTER_PATH%;%FLUTTER_PATH%\bin;%FLUTTER_PATH%\.pub-cache\bin', [System.EnvironmentVariableTarget]::Machine)
+# [System.Environment]::SetEnvironmentVariable('IDF_PATH_SET', '%IDF_PATH%\tools;%IDF_PATH%\components\esptools_py\esptool;%IDF_PATH%\components\espcoredump;%IDF_PATH%\components\partition_table', [System.EnvironmentVariableTarget]::Machine)
+# [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH', '%ChocolateyToolsLocation%\flutter', [System.EnvironmentVariableTarget]::Machine)
+# [System.Environment]::SetEnvironmentVariable('FLUTTER_PATH_SET', '%FLUTTER_PATH%;%FLUTTER_PATH%\bin;%FLUTTER_PATH%\.pub-cache\bin', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('IDF_TOOLS_PATH', '%USERPROFILE%\.espressif', [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable('MSYS32_PATH', '%ENVIRONMENT_PATH%\msys32', [System.EnvironmentVariableTarget]::Machine)
-[System.Environment]::SetEnvironmentVariable('MSYS32_PATH_SET', '%MSYS32_PATH%\usr\bin;%MSYS32_PATH%\mingw32\bin;%MSYS32_PATH%\opt\xtensa-esp32-elf\bin', [System.EnvironmentVariableTarget]::Machine)
+# [System.Environment]::SetEnvironmentVariable('MSYS32_PATH', '%ENVIRONMENT_PATH%\msys32', [System.EnvironmentVariableTarget]::Machine)
+# [System.Environment]::SetEnvironmentVariable('MSYS32_PATH_SET', '%MSYS32_PATH%\usr\bin;%MSYS32_PATH%\mingw32\bin;%MSYS32_PATH%\opt\xtensa-esp32-elf\bin', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('GIT_SSH', 'G:\My Drive\PortableApps\PuTTYPortable\App\putty\PLINK.EXE', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('SSH_AUTH_SOCK', '\\.\pipe\ssh-pageant', [System.EnvironmentVariableTarget]::Machine)
 [System.Environment]::SetEnvironmentVariable('ESPPORT', 'COM7', [System.EnvironmentVariableTarget]::Machine)
