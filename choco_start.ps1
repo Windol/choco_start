@@ -47,6 +47,7 @@ New-Item -Path "C:\Users\windo\AppData\Roaming\Factorio" -ItemType SymbolicLink 
 # New-Item -Path "C:\ProgramData\Dell" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Dell"
 # New-Item -Path "C:\Program Files\Docker" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Docker"
 # New-Item -Path "C:\Program Files (x86)\Microsoft Visual Studio" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Microsoft Visual Studio"
+New-Item -Path "C:\Program Files\Common Files\Siemens" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Common Files\Siemens"
 New-Item -Path "C:\Program Files\Siemens" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Siemens"
 New-Item -Path "C:\Program Files (x86)\Common Files\Siemens" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Common Files\Siemens"
 New-Item -Path "C:\ProgramData\Siemens" -ItemType SymbolicLink -Value "C:\Users\Dados\ProgramData\Siemens"
