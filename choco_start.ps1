@@ -94,7 +94,7 @@ choco install discord -y
 # leagueoflegends
 
 # Others
-choco install whatsapp -y --ignore-checksums
+winget install --accept-source-agreements -e --id WhatsApp.WhatsApp
 choco install whatsapp stremio ghostscript winpcap obs-studio obs-virtualcam streamlabs-obs chocolateygui slack -y
 # skyfonts ext2fsd microsoft-teams
 
