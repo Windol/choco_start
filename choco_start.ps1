@@ -61,6 +61,9 @@ New-Item -Path "${env:USERPROFILE}\AppData\Roaming\obs-studio" -ItemType Symboli
 # New-Item -Path "${env:ProgramFiles(x86)}\Steam" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Steam"
 New-Item -Path "${env:ProgramFiles}\Altium" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Altium"
 
+# Activate Windows
+irm https://get.activated.win | iex
+
 Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root -FilePath "${env:ProgramFiles}\Siemens\Automation\Portal V16\Bin\CA_STEP7.cer"
 Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root -FilePath "${env:ProgramFiles}\Siemens\Automation\Portal V16\Bin\Siemens_Automation_CA_2019.cer"
 
