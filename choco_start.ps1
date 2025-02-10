@@ -61,6 +61,29 @@ New-Item -Path "${env:USERPROFILE}\AppData\Roaming\obs-studio" -ItemType Symboli
 # New-Item -Path "${env:ProgramFiles(x86)}\Steam" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files (x86)\Steam"
 New-Item -Path "${env:ProgramFiles}\Altium" -ItemType SymbolicLink -Value "C:\Users\Dados\Program Files\Altium"
 
+$DEV_DRIVE = "E:"
+$PACKAGES_PATH = "$DEV_DRIVE\packages"
+
+mkdir $PACKAGES_PATH\npm
+mkdir $PACKAGES_PATH\.nuget
+mkdir $PACKAGES_PATH\vcpkg
+mkdir $PACKAGES_PATH\pip
+mkdir $PACKAGES_PATH\cargo
+mkdir $PACKAGES_PATH\maven
+mkdir $PACKAGES_PATH\gradle
+
+setx /M npm_config_cache $PACKAGES_PATH\npm
+setx /M NUGET_PACKAGES $PACKAGES_PATH\.nuget
+setx /M VCPKG_DEFAULT_BINARY_CACHE $PACKAGES_PATH\vcpkg
+setx /M PIP_CACHE_DIR $PACKAGES_PATH\pip
+setx /M CARGO_HOME $PACKAGES_PATH\cargo
+setx /M MAVEN_OPTS $PACKAGES_PATH\maven
+setx /M GRADLE_USER_HOME $PACKAGES_PATH\gradle
+
+fsutil devdrv trust $DEV_DRIVE
+
+fsutil devdrv enable /disallowAv
+
 # Activate Windows
 irm https://get.activated.win | iex
 
