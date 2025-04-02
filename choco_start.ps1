@@ -98,6 +98,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 
 # Essentials
 choco install googlechrome google-drive-file-stream -y --ignore-checksums
+choco install brave -y
 
 # More Tools
 choco install powershell-core dotnetcore-runtime powertoys -y
@@ -120,6 +121,8 @@ choco install discord -y
 winget install --accept-source-agreements -e --id WhatsApp.WhatsApp
 choco install whatsapp stremio ghostscript winpcap obs-studio obs-virtualcam streamlabs-obs chocolateygui slack -y
 # skyfonts ext2fsd microsoft-teams
+winget install --id=Anysphere.Cursor -e
+# choco install cursoride -y
 
 # Install conform
 # go get github.com/talos-systems/conform
